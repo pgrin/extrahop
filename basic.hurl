@@ -16,25 +16,20 @@ POST http://localhost:3000/
 order: newest
 count: "'"
 
-
 PUT http://localhost:3000/
 [Query]
 order: --
 count: 100
-
-
 
 PUT http://localhost:3000/
 [Form]
 order: --
 count: 100
 
-
 PUT http://localhost:3000/
 [Cookies]
 order: --
 count: 100
-
 
 POST http://localhost:3000/
 {
@@ -46,5 +41,10 @@ POST http://localhost:3000/
     "location": "Lisco, Alabama"
 }
 
+POST http://localhost:3000/
+Content-Type: text/html
+<script>alert('XSS')</script>
 
-
+POST http://localhost:3000/
+[Form]
+order: "<script>something</script>"

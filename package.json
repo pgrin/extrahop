@@ -5,9 +5,10 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "yarn backend & yarn proxy",
     "watch": "tsc --watch",
-    "backend": "node dist/backend.js"
+    "backend": "node dist/backend.js",
+    "proxy": "node dist/proxy.js"
   },
   "dependencies": {
     "body-parser": "^2.2.0",

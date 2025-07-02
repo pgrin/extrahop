@@ -1,4 +1,5 @@
 export const isPotentialSQLi = (input: string): boolean => {
+  // SQL injection patterns
   const patterns = [
     /(\%27)|(\')|(\-\-)|(\%23)|(#)/i, // Single quotes, --, #
     /(\bOR\b|\bAND\b).*(=|\bLIKE\b)/i, // OR/AND, =, LIKE
